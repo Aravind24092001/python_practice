@@ -1,0 +1,23 @@
+-- select count(*) from hr.employees where salary > 8000;
+-- DESCRIBE hr.employees
+-- select count (*) from hr.employees where salary > 8000;
+-- How many employees were hired before 2015?
+-- SELECT COUNT(*) AS hired_year FROM hr.employees WHERE EXTRACT(YEAR FROM hire_date) < 2015;
+-- How many employees belong to department 50?
+-- select count(*) as belong_department,depatment_id  from hr.employees where department_id = 50;
+-- How many employees have commission percentage assigned?
+-- select count(*) from hr.employees group by percentage HAVING commission;
+-- SELECT first_name, salary, commission_pct, 
+-- salary * commission_pct AS commission_amount 
+-- FROM hr.employees WHERE commission_pct IS NOT NULL;
+-- select FIRST_name(-3, '***') from hr.employees
+
+-- DESCRIBE HR.EMPLOYEES;
+-- select FIRST_NAME(-3, '***') from hr.employees
+-- SELECT SUBSTR(first_name, 1, LENGTH(first_name) - 3) || '***' AS masked_name
+-- FROM hr.employees;
+
+-- select substr(first_name,1,- length(first_name)-3)||'***' as last_star from hr.EMPLOYEES
+-- -- SELECT SUBSTR(first_name, 1, LENGTH(first_name) - 3) || '***' AS last_star
+-- FROM hr.employees;
+-- SELECT SUBSTR(first_name, 1, 2) || '***' AS last_star FROM hr.employees;
